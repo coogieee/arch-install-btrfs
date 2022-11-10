@@ -65,7 +65,7 @@ echo "--------------------------------------"
 pacstrap /mnt base base-devel linux linux-firmware grub efibootmgr nano git sudo --noconfirm --needed
 genfstab -U /mnt >> /mnt/etc/fstab
 
-arch-chroot /mnt 
+cat << EOT arch-chroot /mnt 
 
 pacman -S neofetch --noconfirmi --needed
 echo "--------------------------------------"
